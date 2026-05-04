@@ -1,6 +1,8 @@
 # CartAlchemy — Blog Module Architecture
 
-The blog module powers content publishing across two Express/Handlebars apps — an admin app for content management and a public-facing website for readers. All blog content lives in a single MongoDB collection (`blogs`) differentiated by `documentType`, with images stored in S3 after processing through Sharp.
+I inherited the blog module for CartAlchemy v1 in a largely non-functional state and led a full overhaul to get it production-ready. That meant stabilising the core post management flow, then building out a suite of new features on top: a two-mode content authoring system (CKEditor 5 WYSIWYG and page builder integration), an image processing pipeline (Sharp → WebP → S3), scheduled publishing, draft preview, and a custom-built SEO and readability analysis engine with 21 checks and Flesch-Kincaid reading level scoring.
+
+The module powers content publishing across two Express/Handlebars apps — an admin app for content management and a public-facing website for readers. All blog content lives in a single MongoDB collection (`blogs`) differentiated by `documentType`, with images stored in S3 after processing through Sharp.
 
 ---
 
